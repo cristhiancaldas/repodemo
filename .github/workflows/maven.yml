@@ -19,7 +19,6 @@ jobs:
 
   deploy-dev:
     name: 'Build branch develop'
-    if: ${{ github.ref == 'refs/heads/develop' }}
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
