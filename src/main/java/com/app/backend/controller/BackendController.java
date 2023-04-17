@@ -10,7 +10,7 @@ public class BackendController {
 	
 	@GetMapping
 	public String getDemo() {
-		return "Microservice Demo 2023";
+		return "Microservice Demo 2023-01";
 	}
 	
 }
