@@ -17,8 +17,8 @@ on:
 
 jobs:
 
-  deploy-dev:
-    name: 'Build branch develop'
+  build-dev:
+    name: '📌Build branch develop'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -32,7 +32,8 @@ jobs:
       run: mvn -B package --file pom.xml
 
   test-main:
-    name: 'Test main'
+    needs: 'build-dev'
+    name: '🚀Test main'
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
